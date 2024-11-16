@@ -13,6 +13,19 @@
 	<b>Lecturer</b><br>
 	<b>Information and Communication Technology</b><br>
 	<b>RCBSC</b>
+
+
+	<div style="text-align: center; margin-top: 50px;">
+  <h2>Square Calculator</h2>
+  <form (submit)="calculateSquare()">
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" [(ngModel)]="number" name="number" required />
+    <button type="submit">Calculate</button>
+  </form>
+  <div *ngIf="result !== null" style="margin-top: 20px;">
+    <p>The square of {{ number }} is: <strong>{{ result }}</strong></p>
+  </div>
+</div>
   
   <script src="script.js"></script>
 </body>
